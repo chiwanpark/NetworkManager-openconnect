@@ -1571,7 +1571,7 @@ static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTab
 	g_unix_set_fd_nonblocking(ui_data->cancel_pipes[0], TRUE, NULL);
 	g_unix_set_fd_nonblocking(ui_data->cancel_pipes[1], TRUE, NULL);
 
-	ui_data->vpninfo = (void *)openconnect_vpninfo_new("OpenConnect VPN Agent (NetworkManager)",
+	ui_data->vpninfo = (void *)openconnect_vpninfo_new("Mozilla/5.0 (X11; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0",
 							   validate_peer_cert, write_new_config,
 							   nm_process_auth_form, write_progress,
 							   ui_data);
